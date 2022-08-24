@@ -5,7 +5,13 @@
   box-sizing: border-box;
   font-family: century;
 }
-
+img {
+  display: block;
+  max-width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
   width: 0.8rem;
 }
@@ -16,11 +22,18 @@
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(212, 170, 32, 0.855);
-  border: 0.1rem solid;
+  /* border: 0.1rem solid; */
   border-radius: 0.7rem;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(56, 50, 29, 0.855);
+}
+.container {
+  min-width: 300px;
+  max-width: 1200px;
+  /* para ele ficar no centro da pag, colocaremos margin left e right auto */
+  margin-left: auto;
+  margin-right: auto;
 }
 /* NavBar */
 .navbar {
@@ -60,7 +73,7 @@
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 840px;
+  height: 838px;
   justify-content: center;
   align-items: center;
   color: white;
@@ -78,6 +91,7 @@
   z-index: -1;
   opacity: 0.8;
 }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -89,7 +103,7 @@
 }
 .titulo {
   font-family: century;
-  font-size: 3rem;
+  font-size: 2.7rem;
   text-align: center;
   margin: 40px 0px;
 }
@@ -114,31 +128,42 @@
 }
 /* Sobre */
 .sobre {
-  /* flex-wrap: wrap; */
-  display: grid;
-  /* flex-direction: column; */
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  grid-template-columns: 1fr 1fr;
   padding: 2rem;
   gap: 0.2rem;
   color: #444;
   margin: 4rem 10rem 4rem 10rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
-
+.titleW {
+  font-size: 3rem;
+  font-weight: normal;
+  color: rgba(207, 168, 39, 0.855);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
 .pic img {
   width: 100%;
   /* min-width: 315px;
   height: 418px;*/
-
+  flex: 1 1 160px;
+  margin: 0 10px;
   width: 313.34px;
   height: 417px;
+  align-items: center;
 }
 .sobre-info {
-  font-size: 1.3rem;
-
-  width: 40rem;
-  height: 20rem;
-  /* margin-left: 2rem; */
+  font-size: 1.2rem;
+  flex: 2 1 300px;
+  margin: 0 10px;
+  /*width: 40rem;
+  height: 20rem; */
+  margin-left: 2.4rem;
   margin-bottom: 3rem;
 }
 .sobre-title {
@@ -174,7 +199,7 @@ ul {
 
 .footer {
   background-color: rgb(54, 54, 54);
-  padding: 60px;
+  padding: 50px;
 }
 .footer-col {
   width: 25%;
@@ -182,7 +207,7 @@ ul {
   /* height: 25%; */
 }
 .footer-col h4 {
-  font-size: 19px;
+  font-size: 1.2rem;
   color: #ffffff;
   text-transform: capitalize;
   margin-bottom: 35px;
@@ -203,7 +228,7 @@ ul {
   margin-bottom: 10px;
 }
 .footer-col ul li p {
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
@@ -241,7 +266,7 @@ ul {
   border-radius: 20px;
 } */
 .box-title span {
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
@@ -278,14 +303,16 @@ ul {
 
 /* 
 cards servicos */
+
 .port {
   display: grid;
   align-items: center;
   justify-items: center;
   height: 100vh;
+
   color: #aeaeae;
   font-family: century;
-  margin-bottom: 15rem;
+  margin-bottom: 5rem;
 }
 
 .box {
@@ -293,11 +320,11 @@ cards servicos */
   padding: 4rem;
   /* box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.16); */
   /* border-radius: 50px; */
-  text-align: center;
+  /* text-align: center;
   margin-top: 2rem;
-  font-family: century;
+  font-family: century; */
 }
-
+/* 
 .portfolio {
   max-width: 886px;
   box-sizing: border-box;
@@ -308,21 +335,24 @@ cards servicos */
 .portfolio ul {
   margin-top: 3rem;
 }
-
-.portfolio li {
-  display: grid;
+.lii {
   height: 23rem;
   width: 58rem;
-  grid-template-columns: 1fr 1fr;
+} */
+.portfolio li {
+  /* height: 23rem;
+  width: 58rem; */
+  /* grid-template-columns: 1fr 1fr;
   text-align: center;
   gap: 5rem;
   color: #606060;
+  display: grid; */
 }
-
+/* 
 .portfolio li + li {
   margin-top: 2rem;
 }
-
+*/
 .portfolio img {
   border-radius: 10px;
 }
@@ -348,78 +378,45 @@ cards servicos */
   text-align: justify;
 }
 
-/* Meus jobs */
-.port2 {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  height: 100vh;
-  color: #aeaeae;
-  font-family: century;
-  margin-bottom: 10rem;
-
-  /* background-color: rgba(207, 168, 39, 0.855); */
-}
-
-.box2 {
+.box {
+  /* background: #eee; */
   padding: 4rem;
   /* box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.16); */
   /* border-radius: 50px; */
   text-align: center;
-  margin-top: 2rem;
-  font-family: century;
+  /* margin-top: 1rem; */
 }
 
-.portfolio2 {
+.portfolio {
   max-width: 886px;
   box-sizing: border-box;
-  font-family: century;
-  font-size: 1.5rem;
 }
 
-.portfolio2 ul {
+.portfolio ul {
   margin-top: 3rem;
 }
 
-.portfolio2 li {
+.portfolio li {
   display: grid;
-  height: 23rem;
-  width: 58rem;
-  grid-template-columns: 1fr;
-  text-align: left;
-  gap: 5rem;
+  grid-template-columns: 1fr 1fr;
+  text-align: justify;
+  gap: 2rem;
   color: #606060;
 }
 
-.portfolio2 li + li {
+.portfolio li + li {
   margin-top: 2rem;
 }
 
-/* .portfolio2 img {
- border-radius: 10px; 
-} */
+.portfolio img {
+  border-radius: 10px;
+}
 
-.portfolio2 h2 {
+.portfolio h2 {
   font-weight: normal;
   margin-bottom: 1rem;
 }
 
-.title2 {
-  font-size: 3rem;
-  font-weight: normal;
-  color: rgba(207, 168, 39, 0.855);
-}
-
-.peTitulos2 {
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: rgba(207, 168, 39, 0.855);
-}
-.mel2 {
-  font-size: 1rem;
-  text-align: left;
-  margin-bottom: 1.3rem;
-}
 .reservaBtn {
   padding: 10px 20px !important;
   font-size: 1rem !important;
@@ -433,7 +430,7 @@ cards servicos */
   margin-right: 4px;
   margin-bottom: 4px;
   margin-top: 0rem;
-  /* font-family: "Open Sans", Arial, serif; */
+
   font-size: 10px;
   font-weight: 300;
   display: inline-block;
@@ -441,8 +438,162 @@ cards servicos */
   white-space: nowrap;
   text-decoration: none;
   box-sizing: border-box;
-  text-align: left;
+  text-align: center;
 }
-.title2 {
-  margin-bottom: 5.5rem;
+
+/* SERVICOS */
+.servicos {
+  margin-top: 12rem;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+
+  margin: auto;
+  min-width: 280px;
+  max-width: 800px;
+}
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+.titleL {
+  font-size: 3rem;
+  font-weight: normal;
+  color: rgba(207, 168, 39, 0.855);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.tit {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: rgba(207, 168, 39, 0.855);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+.ler {
+  color: #444;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+.reservaBtn {
+  text-align: center;
+}
+
+/* Footer */
+.container10 {
+  width: 100%;
+  float: left;
+  padding: 3% 4%;
+  text-align: center;
+  margin-top: 4rem;
+  /* margin-top: 15rem; */
+}
+.bg-gradient {
+  background: rgba(95, 73, 0, 0.855);
+}
+
+.social-icons a {
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 4%;
+}
+
+/* Zerando a margin do último elemento "envelope" */
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.social-icons a:hover {
+  color: rgba(255, 255, 255);
+}
+
+.copyright {
+  margin-top: 2%;
+  color: rgba(255, 255, 255, 0.967);
+}
+
+/* Responsividade*/
+@media (max-width: 600px) {
+  /* Responsividade de Imagem de intro */
+  #home {
+    height: 817px;
+  }
+  .titulo {
+    font-size: 1.5rem;
+  }
+  .navbar ul li a:hover {
+    box-shadow: 0 0 4px white;
+    padding: 5px 17px;
+  }
+
+  /* Responsividade de NavBar */
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Responsividade de Sobre*/
+  .sobre {
+    flex-direction: column;
+    align-items: left;
+  }
+  .sobre-title {
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  /* Responsividade de perfil 2 */
+  /*responsive*/
+
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+  .box-title .b1 {
+    width: 85%;
+  }
+  .box-title .b2 {
+    width: 85%;
+  }
+
+  .box-title .b3 {
+    width: 75%;
+  }
+  .box-title .b4 {
+    width: 80%;
+  }
+
+  /* Portfolio */
+  .box {
+    padding: 2rem;
+    margin-top: 4rem;
+    border-radius: 30px;
+  }
+  .box:first-child {
+    padding: 3rem;
+  }
+  .portfolio ul {
+    margin-top: 1rem;
+  }
+  .portfolio li {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .portfolio li div {
+    max-width: 448px;
+  }
+  .servicos {
+    margin-top: 55rem;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .titleW {
+    font-size: 2.5rem;
+  }
 }
