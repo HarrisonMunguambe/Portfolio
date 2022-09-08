@@ -17,21 +17,33 @@
       integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+     
     <title>Portfólio</title>
   </head>
   <body>
   <div class="conteiner">
 
-    <nav class="navbar">
-      <ul>
-        <li><a href="#home">Página inicial</a></li>
-        <li><a href="#Perfil">Perfil</a></li>
-        <li><a href="#Portfólio">Portfólio</a></li>
-        <li><a href="#Serviços">Serviços</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+    <i  id="burger"class="material-icons" onclick="clickEvent()">menu</i>
+   
+    <nav class="navbar" id="menu">
+      
+        <ul>
+          <li><a href="#home">Página inicial</a></li>
+          <li><a href="#Perfil">Perfil</a></li>
+          <li><a href="#Portfólio">Serviços</a></li>
+          <li><a href="#Serviços"> Portfólio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    
+      
     </nav>
     
+    
+
+
     <section id="home"> 
       <div class="main"> 
         <h1 class="titulo">
@@ -77,6 +89,7 @@
     <section class="footer">
       <div class="container-footer">
         <div class="row">
+          
           <div class="footer-col">
            
             <h4> Educação </h4>
@@ -108,7 +121,7 @@
               <span>CSS 75%</span>
             
               <div class="b1"><div class="b4"></div></div>
-              <span>Capacidades Explicativas 80%</span>
+              <span>Capacidades Explicativas 85%</span>
               <div class="b1"><div class="b2"></div></div>
             
           </div>
@@ -123,14 +136,14 @@
    <section class="port" id="Portfólio">
 
     <div class="portfolio box">
-      <h3 class="title">Portfólio</h3>
+      <h3 class="title">Meus Serviços</h3>
       <ul>
         <li>
           <img src="images/1.jpg" alt="1" />
           <div>
             <h2 class="peTitulos">Criação de Websites</h2>
             <p>
-              A minha jornada no mundo da criação de websites, começou há um ano atrás, tendo já respondido com resultados positivos a delicados trabalhos profissionais. <br> <br>
+              A minha jornada no mundo da criação de websites, começou há um ano, tendo já respondido com resultados positivos a delicados trabalhos profissionais. <br> <br>
               Contudo, não julgo-me positivamente apenas, pelos projectos anteriores, mas sim, por quão ambiciosos são os meus projectos futuros.
               Entusiasmado com a idea de melhorar e dinamizar a ligação entre vendedor e o cliente, continuo a minha jornada como programador web.
             </p>
@@ -158,7 +171,7 @@
 
     <section class="servicos">
 
-     <h3 class="titleL">Meus Serviços</h3>
+     <h3 class="titleL"> Portfólio</h3>
     
  
      <img src="images/hotel.png" alt="1" class="img-responsive " />
@@ -166,7 +179,7 @@
      <p class="ler">
        
        Tendo em conta que a Hotelaria Rest and Peace, tem vindo a crescer, o departamento de marketing da Hotelaria julgou de extrema importância a criação de uma conexão web com os seus hóspedes, o que culminou, com a escolha dos meus serviços para dar vida em formato digital, aos hotéis Rest and Peace. <br> <br>
-       Através do website é possível fazer uma reserva, ver quais são as principais comodidades dos quarto hotéis, respectivamente, Nampula, Maputo, Xai-Xai e de Inhambane, que a Hotelaria Rest and Peace tem ao dispor dos seus hóspedes, ver os seus serviços especiais e as categorias de quarto que melhor adequam as exigências do cliente.
+       Através do website é possível fazer uma reserva, ver quais são as principais comodidades dos quatro hotéis, respectivamente, Nampula, Maputo, Xai-Xai e de Inhambane, que a Hotelaria Rest and Peace tem ao dispor dos seus hóspedes, ver os seus serviços especiais e as categorias de quarto que melhor adequam as exigências do cliente.
      <br> <br>
 
        <a href="https://harrisonmunguambe.github.io/Hotelaria/" class="reservaBtn" target="_blank">Ver Website</a>
@@ -271,6 +284,18 @@
     </p>
   </footer>
 
+  <script>
+    function clickEvent(){
 
+      if( menu.style.display == 'block'){
+        menu.style.display = 'none'
+      }
+        else{
+          menu.style.display = 'block'
+        }        
+      }
+
+    
+  </script>
   </body>
 </html>

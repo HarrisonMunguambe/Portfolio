@@ -67,7 +67,23 @@ html {
   color: black;
   box-shadow: 0 0 10px white;
 }
+/* hamburger */
+i#burger {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  color: rgba(207, 168, 39, 0.855);
+  padding: 15px;
+  font-size: 30px;
 
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+
+i#burger:hover {
+  /* background-color: white; */
+  color: white;
+}
 /* Home */
 #home {
   display: flex;
@@ -86,7 +102,7 @@ html {
   right: 0;
   background: url("images/InShot_20210523_105813645.jpg") no-repeat center
     center/cover;
-  height: 900px;
+  height: 899px;
   width: 100%;
   z-index: -1;
   opacity: 0.8;
@@ -252,10 +268,6 @@ ul {
   border-radius: 50%;
   color: #ffffff;
   transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover {
-  color: #04b2dc;
-  background-color: #ffffff;
 }
 /* #about .container .box-title {
   width: 420px;
@@ -449,8 +461,8 @@ cards servicos */
   border-radius: 10px;
 
   margin: auto;
-  min-width: 280px;
-  max-width: 800px;
+  min-width: 380px;
+  max-width: 900px;
 }
 .img-responsive {
   width: 100%;
@@ -513,9 +525,67 @@ cards servicos */
   margin-top: 2%;
   color: rgba(255, 255, 255, 0.967);
 }
+i#burger {
+  display: none;
+}
 
 /* Responsividade*/
 @media (max-width: 600px) {
+  /* Responsividade de Imagem de hamburger*/
+  /* .navbar li a {
+    color: white;
+    display: block;
+    padding: 20px 30px 20px;
+  } */
+  .navbar {
+    display: none;
+  }
+  i#burger {
+    display: block;
+  }
+
+  #home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("images/InShot_20210523_105813645.jpg") no-repeat center
+      center/cover;
+    height: 877px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+  }
+  .navbar {
+    transition: opacity 1s, height 0 1s;
+    height: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 300px;
+    height: 100vh;
+    padding-top: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    width: 100%;
+  }
+
+  .navbar li a {
+    padding: 40px;
+    font-size: 1rem;
+  }
+
   /* Responsividade de Imagem de intro */
   #home {
     height: 817px;
@@ -588,7 +658,7 @@ cards servicos */
     max-width: 448px;
   }
   .servicos {
-    margin-top: 50rem;
+    margin-top: 40rem;
   }
   .title {
     font-size: 2.5rem;
